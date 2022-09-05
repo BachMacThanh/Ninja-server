@@ -982,7 +982,7 @@ public class GameSrc {
                 return;
             }
             if (p.c.quantityItemyTotal(340) == 0) {
-                p.conn.sendMessageLog("Cần có phiếu may mắn (mua tại NPC Goosho).");
+                p.conn.sendMessageLog("Muốn chơi cần có phiếu may mắn (mua tại NPC Goosho).");
                 return;
             }
 
@@ -1050,7 +1050,7 @@ public class GameSrc {
                 item.expires = Util.TimeDay(GameSrc.ArrdayLuck[Util.nextInt(GameSrc.ArrdayLuck.length)]);
             }
             if (data.type != 19) {
-                if(item.id == 733 || item.id == 734 || item.id == 760 || item.id == 761 || (item.id >= 737 && item.id <= 741) || (item.id >= 764 && item.id <= 768) ) {
+                if(item.id == 733 || item.id == 734 || item.id == 760 || item.id == 761 || (item.id >= 737 && item.id <= 741) || (item.id >= 764 && item.id <= 768) || item.id == 283 ) {
                     item.quantity = 1;
                     item.isLock = true;
                     item.isExpires = false;
@@ -1058,10 +1058,10 @@ public class GameSrc {
                 }
                 p.c.addItemBag(true, item);
             }
-//        if ( id == 8 || id == 9 || id == 11 || id == 343 || id == 344 || id == 345 || id == 346 || id == 403 || id == 404 || id == 405 || id == 406 || id == 407 || id == 408 || id == 419) {
-//            Manager manager = GameSrc.server.manager;
-//            Manager.chatKTG(p.c.name + " tham gia lật bài may mắn nhận được" + ((item.quantity > 1) ? (" " + item.quantity + " ") : " ") + data.name);
-//        }
+    //    if ( id == 8 || id == 9 || id == 11 || id == 343 || id == 344 || id == 345 || id == 346 || id == 403 || id == 404 || id == 405 || id == 406 || id == 407 || id == 408 || id == 419) {
+    //        Manager manager = GameSrc.server.manager;
+    //        Manager.chatKTG(p.c.name + " tham gia lật bài may mắn nhận được" + ((item.quantity > 1) ? (" " + item.quantity + " ") : " ") + data.name);
+    //    }
             m = new Message(-28);
             m.writer().writeByte(-72);
             byte i;
@@ -2555,7 +2555,7 @@ public class GameSrc {
     public static void ngocFeature(Player p, Message m) {
         try {
             if (p.c.get().isNhanban) {
-                p.sendAddchatYellow("Tính năng ko dành cho phân thân");
+                p.sendAddchatYellow("Tính năng không dành cho phân thân");
                 return;
             }
             byte type = m.reader().readByte();

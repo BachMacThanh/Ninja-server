@@ -21,6 +21,6 @@ public class Alert {
     }
 
     public void sendAlert(Player player) {
-        Server.manager.sendTB(player, "Ninja Hồi Ức",  (this.getAlert() == null ? "" : this.getAlert())+"\n\n- Số người online: " + Client.gI().ninja_size());
+        Server.manager.sendTB(player, "Giang hồ truyện",  (this.getAlert() == null ? "" : this.getAlert())+"\n\n- Số hảo hiệp trực tuyến: " + Client.gI().ninja_size());
     }
 }

@@ -2498,15 +2498,15 @@ public class Menu {
                         p.c.isTaskHangNgay = 0;
                         p.c.taskHangNgay = new int[]{-1, -1, -1, -1, -1, 0, p.c.countTaskHangNgay};
                         Service.clearTaskOrder(p.c, (byte)0);
-                        long luongUp = Util.nextInt(30, 100);
+                        long luongUp = Util.nextInt(3000, 5000);
                         if(p.status == 1) {
                             luongUp /= 2;
-                            p.c.upxuMessage(150000L);
+                            p.c.upxuMessage(15000L);
                             p.upluongMessage(luongUp);
                             p.c.xuTN += 150000;
                             p.c.luongTN += luongUp;
                         } else {
-                            p.c.upxuMessage(350000L);
+                            p.c.upxuMessage(35000L);
                             p.upluongMessage(luongUp);
                         }
 
@@ -2648,7 +2648,7 @@ public class Menu {
                             p.c.pointUydanh += 3;
                         }
                         Item item = ItemTemplate.itemDefault(251, false);
-                        item.quantity = Util.nextInt(3, 4);
+                        item.quantity = Util.nextInt(10, 20);
                         item.isLock = false;
                         p.c.addItemBag(true, item);
 
@@ -2657,14 +2657,14 @@ public class Menu {
                             itemUp.isLock = true;
                             itemUp.isExpires = false;
                             itemUp.expires = -1L;
-                            itemUp.quantity = Util.nextInt(20,30);
+                            itemUp.quantity = Util.nextInt(20,50);
                             p.c.addItemBag(true, itemUp);
                         } else {
                             Item itemUp = ItemTemplate.itemDefault(p.c.gender == 1 ? 738 : 765, true);
                             itemUp.isLock = true;
                             itemUp.isExpires = false;
                             itemUp.expires = -1L;
-                            itemUp.quantity = Util.nextInt(20,30);
+                            itemUp.quantity = Util.nextInt(50,100);
                             p.c.addItemBag(true, itemUp);
                         }
 
@@ -3710,10 +3710,10 @@ public class Menu {
                         p.upluongMessage(250L);
                         p.c.luongTN += 250;
                     } else {
-                        p.upluongMessage(500L);
+                        p.upluongMessage(5000L);
                     }
                     p.c.isDiemDanh = 1;
-                    Service.chatNPC(p, (short) npcid, "Điểm danh thành công, con nhận được 500 lượng.");
+                    Service.chatNPC(p, (short) npcid, "Điểm danh thành công, con nhận được 5000 lượng.");
                 } else {
                     Service.chatNPC(p, (short) npcid, "Hôm nay con đã điểm danh rồi, hãy quay lại vào ngày hôm sau nha!");
                 }
@@ -3735,10 +3735,10 @@ public class Menu {
                         p.upluongMessage(750L);
                         p.c.luongTN += 750;
                     } else {
-                        p.upluongMessage(1500L);
+                        p.upluongMessage(15000L);
                     }
                     p.c.isQuaHangDong = 1;
-                    Service.chatNPC(p, (short) npcid, "Nhận quà hoàn thành hang động thành công, con nhận được 1500 lượng.");
+                    Service.chatNPC(p, (short) npcid, "Nhận quà hoàn thành hang động thành công, con nhận được 15000 lượng.");
                 } else if (p.c.countHangDong < 2) {
                     Service.chatNPC(p, (short) npcid, "Con chưa hoàn thành đủ 2 lần đi hang động, hãy hoàn thành đủ 2 lần và quay lại gặp ta đã nhận thường");
                 }
@@ -3867,7 +3867,7 @@ public class Menu {
                 break;
             }
             case 6: {
-                Server.manager.sendTB(p, "Hướng dẫn", "- Vừa vào chơi, hãy đến chỗ ta nhận quà tân thủ bao gồm: 100tr xu, 20k lượng, 100tr yên \n- Mỗi ngày con được điềm danh hàng ngày 1 lần và nhận 500 lượng \n- Nếu mỗi ngày hoàn thành hang động đủ 2 lần con hãy đến chỗ ta và Nhận quà hang động để nhận 1000 lượng\n\n** Lưu ý, nếu là tài khoản trải nghiệm, con chỉ có thể nhận được 1 nửa phần thường từ ta.");
+                Server.manager.sendTB(p, "Hướng dẫn", "- Vừa vào chơi, hãy đến chỗ ta nhận quà tân thủ bao gồm: 100tr xu, 20k lượng, 100tr yên \n- Mỗi ngày con được điềm danh hàng ngày 1 lần và nhận 5000 lượng \n- Nếu mỗi ngày hoàn thành hang động đủ 2 lần con hãy đến chỗ ta và Nhận quà hang động để nhận 15000 lượng\n\n** Lưu ý, nếu là tài khoản trải nghiệm, con chỉ có thể nhận được 1 nửa phần thường từ ta.");
                 break;
             }
 

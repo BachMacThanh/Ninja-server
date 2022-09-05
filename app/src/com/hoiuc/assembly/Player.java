@@ -72,14 +72,14 @@ public class Player extends User{
                             if(p.c != null && p.c.tileMap != null) {
                                 p.c.tileMap.leave(p);
                             }
-                            p.conn.sendMessageLog("Có người đăng nhập vào tài khoản của bạn.");
+                            p.conn.sendMessageLog("Đã có người đăng nhập vào tài khoản của hảo hiệp.");
                             Client.gI().kickSession(p.conn);
                             conn.sendMessageLog("Tài khoản đang được đăng nhập ở thiết bị khác. Hãy thử lại sau 2s!");
                             return null;
                         } else {
                             if (Client.timeWaitLogin.containsKey(username)) {
                                 if (System.currentTimeMillis() < (Long)Client.timeWaitLogin.get(username)) {
-                                    conn.sendMessageLog("Bạn chỉ có thể đăng nhập lại vào tài khoản sau " + ((Long)Client.timeWaitLogin.get(username) - System.currentTimeMillis()) / 1000L + "s nữa");
+                                    conn.sendMessageLog("Hảo hiệp chỉ có thể đăng nhập lại vào tài khoản sau " + ((Long)Client.timeWaitLogin.get(username) - System.currentTimeMillis()) / 1000L + "s nữa");
                                     return null;
                                 }
                                 Client.timeWaitLogin.remove(username);
