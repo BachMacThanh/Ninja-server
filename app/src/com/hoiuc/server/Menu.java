@@ -76,6 +76,8 @@ public class Menu {
             ms.cleanup();
             p.c.typemenu = 0;
             p.typemenu = npcId;
+
+            // tuy chinh cho custom NPC
             if (npcId == 33) {
                 switch(Server.manager.event) {
                     case 1: {
@@ -268,7 +270,7 @@ public class Menu {
                         }
                     }
                     default: {
-                        Service.chatNPC(p, (short) npcId, "Chức năng này đang được cập nhật");
+                        Service.chatNPC(p, (short) npcId, "Ta không có gì để nói với ngươi");
                         break;
                     }
                 }
@@ -412,7 +414,7 @@ public class Menu {
                         }
                     }
                     default: {
-                        Service.chatNPC(p, (short) npcId, "Chức năng này đang được cập nhật");
+                        Service.chatNPC(p, (short) npcId, "Ta không có gì để nói với ngươi");
                         break;
                     }
                 }
@@ -642,7 +644,7 @@ public class Menu {
                         }
 
                         if (p.luong < 100000) {
-                            Service.chatNPC(p, (short) npcid, "Để thành lập gia tộc, con phải có ít nhất 100000 lượng trong người.");
+                            Service.chatNPC(p, (short) npcid, "Để thành lập gia tộc, con phải có ít nhất 100.000 lượng trong người.");
                             return;
                         }
                         Menu.sendWrite(p, (short) 50, "Tên gia tộc");
@@ -736,7 +738,7 @@ public class Menu {
                     }
                     case 3:
                     default: {
-                        Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật");
+                        Service.chatNPC(p, (short) npcid, "Ra chỗ khác chơi");
                         break;
                     }
                 }
@@ -1012,7 +1014,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật");
+                Service.chatNPC(p, (short) npcid, "Ra chỗ khác chơi con! Ta đang xem Anime");
                 break;
             }
         }
@@ -1038,14 +1040,14 @@ public class Menu {
                         p.requestItem(29 - p.c.gender);
                         return;
                     default:
-                        Service.chatNPC(p, (short)npcid, "Chức năng này đang cập nhật!");
+                        Service.chatNPC(p, (short)npcid, "Suỵt! Nói chuyện phiếm thì đừng tới tìm ta");
                         return;
                 }
             case 1:
                 Service.chatNPC(p, (short)npcid, "Tan bán quần áo, mũ nón, găng tay và giày siêu bền, siêu rẻ!");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Suỵt! Nói chuyện phiếm thì đừng tới tìm ta");
                 break;
             }
         }
@@ -1093,7 +1095,7 @@ public class Menu {
                         }
 
                         if (p.c.countTaskDanhVong < 1) {
-                            Service.chatNPC(p, (short) npcid, "Số lần nhận nhiệm vụ của con hôm nay đã hết");
+                            Service.chatNPC(p, (short) npcid, "Số lần nhận nhiệm vụ của con hôm nay đã hết! Quay lại ngày mai nha!");
                             return;
                         }
 
@@ -1305,7 +1307,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Không giòn không giòn! Hả? Con hỏi gì ta?");
                 break;
             }
         }
@@ -1333,7 +1335,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chữa bệnh cứu người là trách nhiệm của ta! Mong con cũng có tấm lòng như ta!");
                 break;
             }
         }
@@ -1358,7 +1360,7 @@ public class Menu {
                 p.requestItem(8);
                 break;
             case 2: {
-                Service.chatNPC(p, (short) npcid, "3 đời nhà ta bán thức ăn chưa ai bị đau bụng cả!");
+                Service.chatNPC(p, (short) npcid, "3 đời nhà ta bán thức ăn chưa ai bị đau bụng cả! Còn con ta không biết :<");
                 break;
             }
             case 3: {
@@ -1604,7 +1606,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Mất 5s cuộc đời của con rồi đó! Đi làm việc của mình đi!");
                 break;
             }
         }
@@ -1690,7 +1692,7 @@ public class Menu {
                     Service.chatNPC(p, (short)npcid, "Ta giữ đồ chưa bao giờ bị mất thứ gì cả!");
                     break;
                 default: {
-                    Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                    Service.chatNPC(p, (short) npcid, "Tránh ra! Ta đang ăn Mì");
                     break;
                 }
             }
@@ -1749,11 +1751,11 @@ public class Menu {
                 break;
             }
             case 8: {
-                Service.chatNPC(p, (short) npcid, "Cần nâng cấp trang bị, hãy đến quán của ta!");
+                Service.chatNPC(p, (short) npcid, "Cần nâng cấp trang bị, hãy đến quán của ta! Hahaha!");
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Nhắc lại lời ta nói: MU vô địch!");
                 break;
             }
         }
@@ -1763,7 +1765,7 @@ public class Menu {
     public static void npcUmayaki_Lang(Player p, byte npcid, byte menuId, byte b3) throws IOException {
         switch(menuId) {
             case 0:
-                Service.chatNPC(p, (short)npcid, "Ta kéo xe qua các làng với tốc độ ánh sáng!");
+                Service.chatNPC(p, (short)npcid, "Ta kéo xe qua các làng với tốc độ mạng của con!");
                 return;
             case 1:
             case 2:
@@ -1784,7 +1786,7 @@ public class Menu {
                     }
                 }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Có đi hay không còn bảo?");
                 break;
             }
         }
@@ -1812,7 +1814,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ta kéo xe qua các trường, không qua quán net đâu!");
                 return;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Đi không nói mau?");
                 break;
             }
         }
@@ -1839,7 +1841,7 @@ public class Menu {
                 }
             case 1:
                 if (p.c.get().nclass > 0) {
-                    Service.chatNPC(p, (short)npcid, "Con đã vào lớp từ trước rồi mà.");
+                    Service.chatNPC(p, (short)npcid, "Học ít thôi con! Con đã vào lớp từ trước rồi mà.");
                 } else if (p.c.get().ItemBody[1] != null) {
                     Service.chatNPC(p, (short)npcid, "Con cần có 1 tâm hồn trong trắng mới có thể nhập học, hãy tháo vũ khí trên người ra!");
                 } else if (p.c.getBagNull() < 2) {
@@ -1849,7 +1851,7 @@ public class Menu {
                         Admission.Admission(p,(byte)1);
                     } else {
                         if (b3 != 1) {
-                            Service.chatNPC(p, (short)npcid, "Chức năng này đang cập nhật!");
+                            Service.chatNPC(p, (short)npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                             break;
                         }
                         Admission.Admission(p,(byte)2);
@@ -1889,7 +1891,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ta đang hơi mệt xíu, ta sẽ giao chiến với con sau nha! Bye bye...");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -1932,7 +1934,7 @@ public class Menu {
                         Admission.Admission(p,(byte)3);
                     } else {
                         if (b3 != 1) {
-                            Service.chatNPC(p, (short)npcid, "Chức năng này đang cập nhật!");
+                            Service.chatNPC(p, (short)npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                             break;
                         }
 
@@ -1973,7 +1975,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ta đang hơi mệt xíu, ta sẽ giao chiến với con sau nha! Bye bye...");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2050,7 +2052,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ta đang hơi mệt xíu, ta sẽ giao chiến với con sau nha! Bye bye...");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2084,7 +2086,7 @@ public class Menu {
             case 4:
             case 5:
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2097,7 +2099,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ngươi đến đây làm gì, không có nhiệm vụ cho ngươi đâu!");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2110,7 +2112,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ngươi đến đây làm gì, không có nhiệm vụ cho ngươi đâu!");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2123,7 +2125,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Ta sẽ sớm có nhiệm vụ cho con!");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2136,7 +2138,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Khụ khụ...");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2146,7 +2148,7 @@ public class Menu {
     public static void npcGuriin(Player p, byte npcid, byte menuId, byte b3) throws IOException {
         switch(menuId) {
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2155,7 +2157,7 @@ public class Menu {
     public static void npcMatsurugi(Player p, byte npcid, byte menuId, byte b3) throws IOException {
         switch(menuId) {
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2399,7 +2401,7 @@ public class Menu {
                 Service.chatNPC(p, (short)npcid, "Hãy rèn luyện thật chăm chỉ rồi quay lại chỗ ta nhận thưởng nha!");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2855,7 +2857,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2877,7 +2879,7 @@ public class Menu {
                 p.requestItem(34);
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -2953,7 +2955,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3031,7 +3033,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3040,7 +3042,7 @@ public class Menu {
     public static void npcChiHang(Player p, byte npcid, byte menuId, byte b3) throws IOException {
         switch(menuId) {
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3094,7 +3096,7 @@ public class Menu {
                 }
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3104,7 +3106,7 @@ public class Menu {
     public static void npcLongDen(Player p, byte npcid, byte menuId, byte b3) throws IOException {
         switch(menuId) {
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3231,7 +3233,7 @@ public class Menu {
                             break;
                         }
                         default: {
-                            Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                            Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                             break;
                         }
                     }
@@ -3241,7 +3243,7 @@ public class Menu {
             case 0:
             case 2:
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3492,7 +3494,7 @@ public class Menu {
                     break;
                 }
                 default: {
-                    Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                    Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                     break;
                 }
             }
@@ -3524,32 +3526,23 @@ public class Menu {
                 int random = Util.nextInt(0,2);
                 switch (random) {
                     case 0: {
-                        int yen = Util.nextInt(500000,1000000);
-                        if(p.status == 1) {
-                            yen /= 2;
-                            p.c.yenTN += yen;
-                        }
-                        p.c.upyenMessage(yen);
-                        p.sendAddchatYellow("Bạn nhận được " + yen + " yên.");
-                        break;
-                    }
-                    case 1: {
-                        int xu = Util.nextInt(100000,300000);
+                        int xu = Util.nextInt(0,100000);
                         if(p.status == 1) {
                             xu /= 2;
                             p.c.xuTN += xu;
                         }
                         p.c.upxuMessage(xu);
-                        p.sendAddchatYellow("Bạn nhận được " + xu + " xu.");
+                        p.sendAddchatYellow("Hơi đen! Bạn nhận được " + xu + " xu.");
                         break;
                     }
-                    case 2: {
-                        int luong = Util.nextInt(50,150);
+                    case 1: {
+                        int xu = Util.nextInt(100000,500000);
                         if(p.status == 1) {
-                            luong /= 2;
-                            p.c.luongTN += luong;
+                            xu /= 2;
+                            p.c.xuTN += xu;
                         }
-                        p.upluongMessage(luong);
+                        p.c.upxuMessage(xu);
+                        p.sendAddchatYellow("Thật may mắn! Bạn nhận được " + xu + " xu.");
                         break;
                     }
                     default: {
@@ -3593,7 +3586,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Mỗi ngày tìm tới tôi để nhận Xu nhé!");
                 break;
             }
         }
@@ -3636,7 +3629,7 @@ public class Menu {
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3645,11 +3638,11 @@ public class Menu {
     public static void npcVuaHung(Player p, byte npcid, byte menuId, byte b3) throws IOException {
         switch(menuId) {
             case 0: {
-                Service.sendInputDialog(p, (short) 9, "Nhập số COIN muốn đổi.");
+                Service.sendInputDialog(p, (short) 10, "Nhập số yên muốn đổi (100.000 yên = 1000 xu):");
                 break;
             }
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3690,7 +3683,7 @@ public class Menu {
                 Server.manager.sendTB(p, "Hướng dẫn", "- Mời đối thủ vào lôi đài\n\n- Đặt tiền cược (Lớn hơn 1000 xu và chia hết cho 50)\n\n- Khi cả 2 đã đặt tiền cược, và số tiền phải thống nhất bằng nhau thì trận so tài mới có thể bắt đầu.\n\n- Khi đã đặt tiền cược, nhưng thoát, mất kết nối hoặc thua cuộc, thì người chơi còn lại sẽ giành chiến thắng\n\n- Số tiền thắng sẽ nhận được sẽ bị trừ phí 5%\n\n- Nếu hết thời gian mà chưa có ai giành chiến thắng thì cuộc so tài sẽ tính hoà, và mỗi người sẽ nhận lại số tiền của mình với mức phí bị trừ 1%");
                 break;
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3872,7 +3865,7 @@ public class Menu {
             }
 
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3894,7 +3887,7 @@ public class Menu {
             }
 
             default: {
-                Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                 break;
             }
         }
@@ -3919,7 +3912,7 @@ public class Menu {
                     }
 
                     default: {
-                        Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                        Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                         break;
                     }
                 }
@@ -3941,7 +3934,7 @@ public class Menu {
                         break;
                     }
                     default: {
-                        Service.chatNPC(p, (short) npcid, "Chức năng này đang cập nhật!");
+                        Service.chatNPC(p, (short) npcid, "Chơi game vui vẻ nhé! From DangDev with Love <3");
                         break;
                     }
                 }

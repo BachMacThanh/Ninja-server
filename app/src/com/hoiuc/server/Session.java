@@ -232,7 +232,7 @@ public class Session {
                 this.login = true;
                 Manager.getPackMessage(p);
                 HandleController.selectNinja(p, null);
-       //         System.out.println("Login - IP: " + this.ipv4 + " - Session id: " + this.id + " - Username: " + p.username);
+                System.out.println("Login - IP: " + this.ipv4 + " - Session id: " + this.id + " - Username: " + p.username);
             } else {
                 this.login = false;
                 if (Client.timeWaitLogin.containsKey(uname) && (Long)Client.timeWaitLogin.get(uname) - System.currentTimeMillis() > 2000L) {

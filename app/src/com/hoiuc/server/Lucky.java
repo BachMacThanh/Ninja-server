@@ -137,7 +137,7 @@ public class Lucky extends Thread{
         }
         long xuwin = this.totalxu;
         if (this.numplayers > 1) {
-            xuwin = xuwin * 95L / 100L;
+            xuwin = xuwin * 100L / 100L;
         }
         this.numplayers = 0;
         this.totalxu = 0;

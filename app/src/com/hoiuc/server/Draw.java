@@ -468,6 +468,34 @@ public class Draw {
                         }
                         break;
                     }
+                    // đổi yên sang xu
+                    case 10: {
+                        String check = str.replaceAll("\\s+", "");
+                        if(!Util.isNumericInt(str) || check.equals("")) {
+                            Service.chatNPC(p, (short)36, "Giá trị coin xu vào không đúng");
+                            break;
+                        }
+                        long yen = Integer.parseInt(str);
+                        try {
+                            ResultSet red = SQLManager.stat.executeQuery("SELECT `yen` FROM `ninja` WHERE `name` = '"+p.c.name+"';");
+                            if (red != null && red.first()) {
+                                int coinP = Integer.parseInt(red.getString("yen"));
+                                if(yen <= coinP) {
+                                    coinP -= yen;
+                                    SQLManager.stat.executeUpdate("UPDATE `ninja` SET `xu`=`xu`+" + (yen/100) + " WHERE `name`='" + p.c.name + "';");
+                                    SQLManager.stat.executeUpdate("UPDATE `ninja` SET `yen`=" + coinP + " WHERE `name`=" + p.c.name + " LIMIT 1;");
+                                } else {
+                                    p.conn.sendMessageLog("Bạn không đủ yên để đổi ra xu.");
+                                }
+                                p.flush();
+                                red.close();
+                            }
+                        }catch (Exception e) {
+                            e.printStackTrace();
+                            p.conn.sendMessageLog("Lỗi đổi coin.");
+                        }
+                        break;
+                    }
                     case 50: {
                         ClanManager.createClan(p, str);
                         break;
